@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Urban Crunch</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 
@@ -192,7 +191,8 @@ header{padding:15px 20px;flex-direction:column}
 
 <section class="hero">
 <video autoplay muted loop playsinline>
-<source src="https://cdn.coverr.co/videos/coverr-making-a-burger-5176/1080p.mp4" type="video/mp4">
+  <!-- Replace with local video if desired: src="assets/video.mp4" -->
+  <source src="https://cdn.coverr.co/videos/coverr-making-a-burger-5176/1080p.mp4" type="video/mp4">
 </video>
 <h2>Crunch the Flavor, Sip the Vibe</h2>
 <p>Luxury Street Bites • Signature Mojitos • Urban Experience</p>
@@ -267,6 +267,7 @@ function showMenu(category){
     setTimeout(()=>card.classList.add('show'),i*120);
   });
 }
+
 const observer=new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
     if(entry.isIntersecting){
@@ -276,11 +277,12 @@ const observer=new IntersectionObserver(entries=>{
     }
   });
 },{threshold:.2});
+
 document.querySelectorAll('.menu-category').forEach(sec=>observer.observe(sec));
+
 window.addEventListener('DOMContentLoaded',()=>{
   showMenu('quick');
 });
 </script>
-
 </body>
 </html>
